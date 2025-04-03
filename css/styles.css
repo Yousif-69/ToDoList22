@@ -1,0 +1,30 @@
+/**
+ * This file contains all the custom styles for the ToDo List application.
+ */
+
+.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.todo-item {
+    transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+    background-color: #f8f9fa;
+}
+
+.todo-actions {
+    visibility: hidden;
+}
+
+.todo-item:hover .todo-actions {
+    visibility: visible;
+}
+
+.empty-state {
+    padding: 40px 0;
+    text-align: center;
+    color: #6c757d;
+} 

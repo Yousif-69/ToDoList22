@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap To-Do List</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">My To-Do List</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="todo-form" class="mb-4">
+                            <div class="input-group">
+                                <input type="text" id="todo-input" class="form-control" placeholder="Add a new task..." required>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="mb-3">
+                            <select id="filter-select" class="form-select" aria-label="Filter tasks">
+                                <option value="all">All Tasks</option>
+                                <option value="active">Active Tasks</option>
+                                <option value="completed">Completed Tasks</option>
+                            </select>
+                        </div>
+
+                        <ul id="todo-list" class="list-group">
+                            <li class="empty-state">
+                                <i class="fas fa-clipboard-list fa-3x mb-3"></i>
+                                <p>Your to-do list is empty. Add some tasks!</p>
+                            </li>
+                        </ul>
+
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span id="tasks-counter" class="text-muted">0 tasks</span>
+                            <button id="clear-completed" class="btn btn-sm btn-outline-danger">
+                                Clear Completed
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- App JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html> 
